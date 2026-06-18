@@ -1,0 +1,12 @@
+print('Hallo! Ik leer Python!')
+print ("Mijn naam is Alina");
+print ("Ik ben 43 jaar oud!")
+print("Ik woon in Rotterdam")
+print(23+65)
+print(23+54)
+print(20/4)
+print(100-23)
+print("salade", 15, "euro") 
+print("hamburger:",24, "euro")
+print("pizza:",18, "euro")
+print("Giraffe\nAcademy")
