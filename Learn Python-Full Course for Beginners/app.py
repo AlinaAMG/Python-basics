@@ -74,6 +74,112 @@ print(coordinates)
 # coordinates[1] = 10 # krijg error
 print(coordinates[0])
 
+# Functions
+
+def say_hi(name, age):
+    print("Hello " + name + ". You are " + str(age) + " years old!" )
+
+print("Top")
+say_hi("Mike", 35)
+say_hi("Alina", 43)
+print("Bottom")
+
+# Return statement
+
+def cube(num):
+    return num * num *num
+
+result = cube(4)
+print(result)
 
 
+# if statements
+is_male = True
+is_tall = False
+if is_male and is_tall:
+    print("You are a male or tall or both")
+elif is_male and not(is_tall):
+    print("You are a short male")
+elif not(is_male) and is_tall:
+    print("You are not a male but you are tall")
+else:
+    print("You are a female or you are not tall")
 
+# if Statements & Comparisons
+
+def max_num(num1, num2, num3):
+    if num1 >=num2 and num1>=num3:
+        return num1
+    elif num2 >= num1 and num2>=num3:
+        return num2
+    else: 
+        return num3
+
+print(max_num(12,80,5))
+
+# Building a calculator
+
+num1 = float(input("Enter first number: "))
+op = input("Enter operator: ")
+num2 = float(input("Enter second number: "))
+
+if op == "+":
+    print(num1 + num2)
+elif op=="-":
+    print(num1-num2)
+elif op=="*":
+    print(num1*num2)
+elif op=="/":
+    print(num1/num2)
+else:
+    print("Invalid operator")
+
+
+    # Dictionaries
+
+monthConversions={
+    "Jan": "January",
+    "Feb": "February",
+    "Mar":"Martch",
+    "Apr":"April",
+    "May":"May",
+    "Jun":"June",
+    "Jul":"July",
+    "Aug":"August",
+    "Sep":"September",
+    "Oct":"October",
+    "Nov":"November",
+    "Dec":"December",
+}
+# print(monthConversions["Nov"])
+print(monthConversions.get("Dec"))
+# print(monthConversions["Luv", "Not a valid key"])
+
+# While loop
+
+i = 1
+while i <=10:
+    print(i)
+    i += 1
+print("Done with loop")
+
+# Building a guessing game
+
+secret_word = "giraffe"
+guess = ""
+guess_count = 0
+guess_limit = 3
+out_of_guesses = False
+
+
+while guess != secret_word and not(out_of_guesses):
+    if guess_count < guess_limit:
+         guess = input("Enter guess:  ")
+         guess_count+=1
+    else:
+        out_of_guesses = True
+
+if out_of_guesses:
+    print("Out of Guesses, YOU LOSE!")
+else:
+    print("You win!")
