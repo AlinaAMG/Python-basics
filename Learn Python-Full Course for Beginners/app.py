@@ -248,3 +248,35 @@ def translate(phrase):
 
 print(translate(input("Enter a phrase: ")))
 
+# Try Except
+try:
+   answer=10/0
+   number = int(input("Enter a number: "))
+   print(number)
+except ZeroDivisionError as err:
+    print(err)
+except ValueError:
+    print("Invalid input")
+
+
+# Reading Files
+employees = {
+    "Jim":"Salesman",
+    "Paul":"Manager",
+    "Maria":"Recruiter",
+    "John" :"Accountant"
+}
+
+with open("employees.txt", "r+"):
+    print(employees)
+
+employee_file = open("employees.txt", "a")
+employee_file.write("\nKelly - Customer Service")
+
+# for employee in employee_file.readline():
+#     print(employee)
+
+print(employee_file.readable())
+employee_file.close()
+
+# Writing to Files
