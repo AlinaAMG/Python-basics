@@ -288,9 +288,55 @@ print(useful_tools.roll_dice(10))
 # CLASSES & OBJECTS
 from Student import Student
 
-student1 = Student("Jim", "Business", 3.6, False)
+student1 = Student("Jim", "Business", 3.1, False)
 student2 = Student("Mike", "Recruiter", 4.2, True)
+student3 = Student("Aryan", "Footballer", 2.9, True)
 
 
 print(student1.name)
 print(student2.major)
+print(student3.major)
+
+print(student1.on_honor_roll())
+
+# Building a Multiple Choice Quiz
+from Question import Question
+
+question_prompts = [
+    "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orang\n(n)",
+    "What color are Bananas?\n(a) Teal\n(b) Magenta\n(c) Yellow\n(n)",
+    "What color are strawberries?\n(a) Yellow\n(b) Red\n(c) Blue\n(n)"
+]
+
+questions = [
+    Question(question_prompts[0], "a"),
+    Question(question_prompts[1], "c"),
+    Question(question_prompts[2], "b")
+]
+
+def run_test(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt)
+        if answer == question.answer:
+            score += 1
+    print("You got "+ str(score) + "/" + str(len(questions)))
+
+run_test(questions)
+
+# Object Functions
+
+# Inheritance
+
+from Chef import Chef
+from ChineseChef import ChineseChef
+
+myChef = Chef()
+myChef.make_chicken()
+
+myChineseChef = ChineseChef()
+myChineseChef.make_special_dish()
+myChineseChef.make_fried_rice()
+
+# Python Interpreter
+
