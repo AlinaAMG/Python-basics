@@ -279,4 +279,18 @@ employee_file.write("\nKelly - Customer Service")
 print(employee_file.readable())
 employee_file.close()
 
-# Writing to Files
+# Modules and pip
+import useful_tools
+
+print(useful_tools.roll_dice(10))
+
+
+# CLASSES & OBJECTS
+from Student import Student
+
+student1 = Student("Jim", "Business", 3.6, False)
+student2 = Student("Mike", "Recruiter", 4.2, True)
+
+
+print(student1.name)
+print(student2.major)
