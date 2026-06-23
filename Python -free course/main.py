@@ -75,43 +75,99 @@ print(name)
 
 # input() = A function that prompts the user to enter data Returns the entered data as a string
 
-name = input("What is your name? : ")
-age = int(input("How old are you? : "))
+# name = input("What is your name? : ")
+# age = int(input("How old are you? : "))
 
-age = age + 1 
+# age = age + 1 
 
-print(f"Hello {name}")
-print(f"You are {age} years old")
+# print(f"Hello {name}")
+# print(f"You are {age} years old")
 
 # Exercise 1 Rectangle Area Calc
 
-length = float(input("Enter the length: "))
-width = float(input("Enter the width: "))
-area = length * width 
+# length = float(input("Enter the length: "))
+# width = float(input("Enter the width: "))
+# area = length * width 
 
-print(f"The area is : {area} cm²")
+# print(f"The area is : {area} cm²")
 
 # Exercise 2 Shopping Cart Program 
 
-item = input("What item would you like to buy? : ")
-price = float(input("What is the price : "))
-quantity = int(input("How many would you like? : "))
-total = price * quantity
+# item = input("What item would you like to buy? : ")
+# price = float(input("What is the price : "))
+# quantity = int(input("How many would you like? : "))
+# total = price * quantity
 
-print(f"You have bought {quantity} x {item}/s")
-print(f"Your total is: {total} euros ")
+# print(f"You have bought {quantity} x {item}/s")
+# print(f"Your total is: {total} euros ")
 
 # Madlibs Game
 # word game where you create a story
 # by filling in blanks with random words
 
-adjective1 = input("Enter an adjective(description): ")
-noun1 = input("Enter a noun(person,place,thing ): ")
-adjective2 = input("Enter an adjective(description): ")
-verb1 = input("Enter a verb ending with ing: ")
-adjective3 = input("Enter an adjective(description): ")
+# adjective1 = input("Enter an adjective(description): ")
+# noun1 = input("Enter a noun(person,place,thing ): ")
+# adjective2 = input("Enter an adjective(description): ")
+# verb1 = input("Enter a verb ending with ing: ")
+# adjective3 = input("Enter an adjective(description): ")
 
-print(f"Today i went to a {adjective1} zoo.")
-print(f"In an exhibit, I saw a {noun1}")
-print(f"{noun1} was {adjective2} and {verb1}")
-print(f"I was {adjective3}")
+# print(f"Today i went to a {adjective1} zoo.")
+# print(f"In an exhibit, I saw a {noun1}")
+# print(f"{noun1} was {adjective2} and {verb1}")
+# print(f"I was {adjective3}")
+
+# OPERATORS
+
+friends = 5
+friends += 1
+friends -= 2
+friends *= 3
+friends /= 2
+friends **= 2
+remainder = friends % 2
+
+
+print(friends)
+
+import math 
+
+x = 9.6
+y = 4
+z= 5
+
+# result = round(x)
+# result = abs(y)
+# result = pow(4,3)
+# result = max(x,y,z)
+# result = min(x,y,z)
+# result = math.sqrt(x)
+# result = math.ceil(x)
+result = math.floor(x)
+
+print(result)
+
+print(math.pi)
+print(math.e)
+
+
+
+# Calculate circumference of a circle
+
+radius = float(input("Enter the radius of a circle: "))
+circumference = 2 * math.pi * radius
+print(f"The circumference is: {round(circumference)}cm")
+
+# Calculate area of a circle
+radius = float(input("Enter the radius of a circle: "))
+area = math.pi *pow(radius,2)
+
+print(f"The area of the circle is : {round(area,2)} cm²")
+
+
+a = float(input("Enter side A: "))
+b = float(input("Enter side B: "))
+
+c= math.sqrt(pow(a,2) + pow(b,2))
+
+print(f"Side C = {c}")
+
