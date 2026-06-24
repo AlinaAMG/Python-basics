@@ -153,21 +153,110 @@ print(math.e)
 
 # Calculate circumference of a circle
 
-radius = float(input("Enter the radius of a circle: "))
-circumference = 2 * math.pi * radius
-print(f"The circumference is: {round(circumference)}cm")
+# radius = float(input("Enter the radius of a circle: "))
+# circumference = 2 * math.pi * radius
+# print(f"The circumference is: {round(circumference)}cm")
 
-# Calculate area of a circle
-radius = float(input("Enter the radius of a circle: "))
-area = math.pi *pow(radius,2)
+# # Calculate area of a circle
+# radius = float(input("Enter the radius of a circle: "))
+# area = math.pi *pow(radius,2)
 
-print(f"The area of the circle is : {round(area,2)} cm²")
+# print(f"The area of the circle is : {round(area,2)} cm²")
 
 
-a = float(input("Enter side A: "))
-b = float(input("Enter side B: "))
+# a = float(input("Enter side A: "))
+# b = float(input("Enter side B: "))
 
-c= math.sqrt(pow(a,2) + pow(b,2))
+# c= math.sqrt(pow(a,2) + pow(b,2))
 
-print(f"Side C = {c}")
+# print(f"Side C = {c}")
 
+
+# If = Do some code only IF some condition is True
+#  Else do something else
+
+# age = int(input("Enter your age: "))
+
+# if age >=100:
+#     print("You are too old to sign up!")
+# elif age >= 18:
+#     print("You are now signed up!")
+# elif age < 0:
+#     print("You haven't been born yet!")
+# else:
+#     print("You must be 18+ to sign up")
+
+# response = input("Would you like food? (Y/N): ")
+
+# if response == "Y":
+#     print("Have some food!")
+# else:
+#     print("No food for you!")
+
+# name = input("Enter your name: ")
+
+# if name == "":
+#     print("You did not type in your name!")
+# else:
+#     print(f"Hello {name}")
+
+# for_sale = True
+
+# if for_sale:
+#     print("This item is for sale")
+# else:
+#     print("this item is NOT for sale")
+
+
+ # Python calculator
+
+# operator = input("Enter an operator ( + - * / ): ")
+# num1 = float(input("Enter the 1st number: "))
+# num2 = float(input("Enter the 2nd number: "))
+
+# if operator == "+":
+#    result = num1 + num2
+#    print(round(result,3))
+# elif operator == "-":
+#     result = num1 - num2
+#     print(round(result,3))
+# elif operator =="*":
+#     result = num1 * num2
+#     print(round(result,3))
+# elif operator == "/":
+#    result = num1 / num2
+#    print(round(result,3))
+# else:
+#     print(f"{operator} is not a valid operator")
+
+
+# Python weight convertor
+
+# weight = float(input("Enter your weight: "))
+# unit = input("Kilograms or Pounds? (K or L): ")
+
+# if unit == "K":
+#     weight = weight * 2.205
+#     unit = "Lbs."
+#     print(f"Your weight is: {round(weight,1)} {unit}")
+# elif unit == "L":
+#     weight = weight / 2.205
+#     unit = "Kgs."
+#     print(f"Your weight is: {round(weight, 1)} {unit}")
+# else:
+#     print(f"{unit}  was not valid")
+
+# Python temperature convertor
+
+unit = input("Is this temperature in Celsius or Fahrenheit (C/F): ")
+temp = float(input("Enter the temperature: "))
+
+if unit == "C":
+    temp = round((9 * temp) /5+32, 1)
+    print(f"The temperature in Fahrenheit is: {temp}°F")
+elif unit == "F":
+   temp = round((temp -32) *5 / 9, 1)
+   print(f"The temperature in Celsius is: {temp }°C")
+
+else:
+    print(f"{unit} is an invalid unit of measurement")
