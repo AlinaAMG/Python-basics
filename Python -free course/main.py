@@ -276,27 +276,27 @@ else:
 # else:
 #     print("The outdoor event is still scheduled")
 
-temp = 28 
-is_sunny = False
+# temp = 28 
+# is_sunny = False
 
-if temp >= 28 and is_sunny:
-    print("It is HOT outside ♨️")
-    print("It is SUNNY ☀️")
-elif temp <=0 and is_sunny:
-    print("It is COLD outside 🥶")
-    print("It is SUNNY 🌞")
-elif 28 > temp > 0 and is_sunny:
-    print("it is WARM outside 😁")
-    print("It is SUNNY ☀️")
-elif temp >= 28 and not is_sunny:
-    print("It is HOT outside ♨️")
-    print("It is CLOUDY ☁️")
-elif temp <= 0 and not is_sunny:
-    print("It is COLD outside")
-    print("It is CLOUDY ☁️")
-elif 28>temp > 0 and not is_sunny:
-    print("It is WARM outside")
-    print("It is CLOUDY ☁️")
+# if temp >= 28 and is_sunny:
+#     print("It is HOT outside ♨️")
+#     print("It is SUNNY ☀️")
+# elif temp <=0 and is_sunny:
+#     print("It is COLD outside 🥶")
+#     print("It is SUNNY 🌞")
+# elif 28 > temp > 0 and is_sunny:
+#     print("it is WARM outside 😁")
+#     print("It is SUNNY ☀️")
+# elif temp >= 28 and not is_sunny:
+#     print("It is HOT outside ♨️")
+#     print("It is CLOUDY ☁️")
+# elif temp <= 0 and not is_sunny:
+#     print("It is COLD outside")
+#     print("It is CLOUDY ☁️")
+# elif 28>temp > 0 and not is_sunny:
+#     print("It is WARM outside")
+#     print("It is CLOUDY ☁️")
 
 
 # Conditional expression = A one-line shortcut for the if-else statement (ternary operator)
@@ -333,7 +333,7 @@ user_role = "admin"
 
 # String methodes
 # name = input("Enter your full name: ")
-phone_number = input("Enter your phone number")
+# phone_number = input("Enter your phone number")
 # result = len(name)
 # result = name.find(" ")
 # name = name.capitalize()
@@ -343,7 +343,7 @@ phone_number = input("Enter your phone number")
 # result= name.isalpha()
 # result = phone_number.count("-")
 # result = phone_number.replace("-", " ")
-print(result)
+# print(result)
 # print(help(str))
 
 
@@ -352,13 +352,31 @@ print(result)
 # 2. username must not contain spaces
 # 3. username must not contain digits
 
-username = input("Enter a username: ")
+# username = input("Enter a username: ")
 
-if len(username) >12:
-    print("Your username can't be more than 12 characters")
-elif not username.find(" ") == -1:
-    print("Your username can't contain spaces")
-elif not username.isalpha():
-    print("Your username can't contain numbers")
-else:
-    print(f"Welcome {username}")
+# if len(username) >12:
+#     print("Your username can't be more than 12 characters")
+# elif not username.find(" ") == -1:
+#     print("Your username can't contain spaces")
+# elif not username.isalpha():
+#     print("Your username can't contain numbers")
+# else:
+#     print(f"Welcome {username}")
+
+# indexing = accessing elements of a sequence using [] (indexing operator) [start: end : step]
+
+credit_number = "1234-5678-9012-3456"
+
+credit_number = credit_number[::-1] # reverse string
+print(credit_number) 
+
+# print(credit_number[:4])
+# print(credit_number[5:9])
+# print(credit_number[5:])
+# print(credit_number[-1])
+# print(credit_number[::2])
+
+
+last_digits = credit_number[-4:]
+
+print(f"XXXX - XXXX - XXXX - {last_digits}")
