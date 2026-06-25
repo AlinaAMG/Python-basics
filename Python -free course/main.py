@@ -30,48 +30,48 @@ print(f"You run {distance} km")
 
 # Boolean
 
-is_student = False
-for_sale= True
-is_online= True
+# is_student = False
+# for_sale= True
+# is_online= True
 
-print(f"Are you a tudent?: {is_student}")
+# print(f"Are you a tudent?: {is_student}")
 
-if is_student:
-    print("You are a student")
-else:
-    print("you are not a student")
+# if is_student:
+#     print("You are a student")
+# else:
+#     print("you are not a student")
 
-if for_sale:
-    print("That item is for sale")
-else:
-    print("That item is not AVAILABLE")
+# if for_sale:
+#     print("That item is for sale")
+# else:
+#     print("That item is not AVAILABLE")
 
-if is_online:
-    print("You are online")
-else:
-    print("You are offline")
+# if is_online:
+#     print("You are online")
+# else:
+#     print("You are offline")
 
 # Typecasting = the process of converting  a variable from one data type to another str(),  int(), float(), bool()
 
-name= "Alina Gabur"
-age = 42
-gpa = 3.2
-is_student = False
+# name= "Alina Gabur"
+# age = 42
+# gpa = 3.2
+# is_student = False
 
-type(name)
-print(type(name))
+# type(name)
+# print(type(name))
 
-gpa = int(gpa)
-print(gpa)
+# gpa = int(gpa)
+# print(gpa)
 
-age = float(age)
-print(age)
+# age = float(age)
+# print(age)
 
-age = str(age)
-print(type(age))
+# age = str(age)
+# print(type(age))
 
-name = bool(name)
-print(name)
+# name = bool(name)
+# print(name)
 
 # input() = A function that prompts the user to enter data Returns the entered data as a string
 
@@ -118,16 +118,16 @@ print(name)
 
 # OPERATORS
 
-friends = 5
-friends += 1
-friends -= 2
-friends *= 3
-friends /= 2
-friends **= 2
-remainder = friends % 2
+# friends = 5
+# friends += 1
+# friends -= 2
+# friends *= 3
+# friends /= 2
+# friends **= 2
+# remainder = friends % 2
 
 
-print(friends)
+# print(friends)
 
 import math 
 
@@ -404,9 +404,9 @@ price3 = 12.34
 # print(f"Price 3 is {price3:.2f}")
 
 
-print(f"Price 1 is {price1:10}")
-print(f"Price 2 is {price2:10}")
-print(f"Price 3 is {price3:10}")
+# print(f"Price 1 is {price1:10}")
+# print(f"Price 2 is {price2:10}")
+# print(f"Price 3 is {price3:10}")
 
 # WHILE LOOP = execute some code WHILE some condition remains true
 
@@ -432,10 +432,45 @@ while not food == "q":
     
 print("bye")
 
-num = input("Enter a number between 1-10: ")
+# num = input("Enter a number between 1-10: ")
 
-while num < 1 or num > 10 :
-    print(f"{num} is not valid")
-    num = int(input("Enter a number between 1-10: "))
-    
-print(f"Your number is {num}")
+# while num < 1 or num > 10 :
+#     print(f"{num} is not valid")
+#     num = int(input("Enter a number between 1-10: "))
+
+# print(f"Your number is {num}")
+
+# Python compound interest calculator
+
+principle = 0
+rate = 0
+time = 0
+
+while True:
+    principle = float(input("Enter the principle amount: "))
+    if principle < 0 :
+        print("Principle can't be less than zero")
+    else:
+        break
+
+
+while True:
+    rate = float(input("Enter the interest rate: "))
+    if rate < 0 :
+        print("Interest rate can't be less than zero")
+    else:
+        break
+
+while True:
+    time = int(input("Enter the time in years: "))
+    if time < 0:
+        print("Time can't be less than zero")
+    else:
+       break
+
+total = principle * pow((1 + rate / 100),time)
+print(f"Balance after {time}  year/s: ${total:.2f}")
+
+print(principle)
+print(rate)
+print(time)
