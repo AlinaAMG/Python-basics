@@ -513,14 +513,14 @@ credit_card = "1234-5678-9012-3456"
 #             Outer Loop:
 #                  inner loop:
 
-rows = int(input("Enter the number of rows: "))
-columns = int(input("Enter the number of columns: "))
-symbol = input("Enter a symbol to use: ")
+# rows = int(input("Enter the number of rows: "))
+# columns = int(input("Enter the number of columns: "))
+# symbol = input("Enter a symbol to use: ")
 
-for x in range(rows):
-    for y in range(columns):
-      print(symbol, end ="")
-    print()
+# for x in range(rows):
+#     for y in range(columns):
+#       print(symbol, end ="")
+#     print()
 
 # collection = single "Variable" used to store multiple values
 # List = [] ordered and changeable.Duplicated OK
@@ -547,3 +547,18 @@ print(fruits.count("banana"))
 print(fruits)
 # for fruit in fruits:
 #   print(fruit)
+
+
+# SET
+
+fruits = {"apple", "orange", "banana", "coconut", "coconut"}
+
+# print(fruits.add("Pineapple"))
+fruits.remove("apple")
+fruits.pop()
+# fruits.clear()
+
+print(fruits)
+
+#Tuple
+
