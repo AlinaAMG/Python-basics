@@ -248,18 +248,18 @@ print(math.e)
 
 # Python temperature convertor
 
-unit = input("Is this temperature in Celsius or Fahrenheit (C/F): ")
-temp = float(input("Enter the temperature: "))
+# unit = input("Is this temperature in Celsius or Fahrenheit (C/F): ")
+# temp = float(input("Enter the temperature: "))
 
-if unit == "C":
-    temp = round((9 * temp) /5+32, 1)
-    print(f"The temperature in Fahrenheit is: {temp}°F")
-elif unit == "F":
-   temp = round((temp -32) *5 / 9, 1)
-   print(f"The temperature in Celsius is: {temp }°C")
+# if unit == "C":
+#     temp = round((9 * temp) /5+32, 1)
+#     print(f"The temperature in Fahrenheit is: {temp}°F")
+# elif unit == "F":
+#    temp = round((temp -32) *5 / 9, 1)
+#    print(f"The temperature in Celsius is: {temp }°C")
 
-else:
-    print(f"{unit} is an invalid unit of measurement")
+# else:
+#     print(f"{unit} is an invalid unit of measurement")
 
 
 
@@ -365,10 +365,10 @@ user_role = "admin"
 
 # indexing = accessing elements of a sequence using [] (indexing operator) [start: end : step]
 
-credit_number = "1234-5678-9012-3456"
+# credit_number = "1234-5678-9012-3456"
 
-credit_number = credit_number[::-1] # reverse string
-print(credit_number) 
+# credit_number = credit_number[::-1] # reverse string
+# print(credit_number) 
 
 # print(credit_number[:4])
 # print(credit_number[5:9])
@@ -377,9 +377,9 @@ print(credit_number)
 # print(credit_number[::2])
 
 
-last_digits = credit_number[-4:]
+# last_digits = credit_number[-4:]
 
-print(f"XXXX - XXXX - XXXX - {last_digits}")
+# print(f"XXXX - XXXX - XXXX - {last_digits}")
 
 
 # format specifiers = {:flags} format a value based on what flags are inserted
@@ -410,27 +410,27 @@ price3 = 12.34
 
 # WHILE LOOP = execute some code WHILE some condition remains true
 
-name = input("Enter your name: ")
-age = int(input("Enter your age: "))
+# name = input("Enter your name: ")
+# age = int(input("Enter your age: "))
 
 # while name == "":
 #     print("You did  not enter your name")
 #     name = input("Enter your name: ")
 # print(f"Hello {name}")
 
-while age < 0:
-    print("Age can't be negative")
-    age = int(input("Enter your age: "))
+# while age < 0:
+#     print("Age can't be negative")
+#     age = int(input("Enter your age: "))
 
-print(f"You are {age} years old")
+# print(f"You are {age} years old")
 
-food = input("Enter a food you like (q to quite): ")
+# food = input("Enter a food you like (q to quite): ")
 
-while not food == "q":
-    print(f"You like {food}")
-    food = input("Enter another food you like (q to quite): ")
+# while not food == "q":
+#     print(f"You like {food}")
+#     food = input("Enter another food you like (q to quite): ")
     
-print("bye")
+# print("bye")
 
 # num = input("Enter a number between 1-10: ")
 
@@ -442,35 +442,108 @@ print("bye")
 
 # Python compound interest calculator
 
-principle = 0
-rate = 0
-time = 0
+# principle = 0
+# rate = 0
+# time = 0
 
-while True:
-    principle = float(input("Enter the principle amount: "))
-    if principle < 0 :
-        print("Principle can't be less than zero")
-    else:
-        break
+# while True:
+#     principle = float(input("Enter the principle amount: "))
+#     if principle < 0 :
+#         print("Principle can't be less than zero")
+#     else:
+#         break
 
 
-while True:
-    rate = float(input("Enter the interest rate: "))
-    if rate < 0 :
-        print("Interest rate can't be less than zero")
-    else:
-        break
+# while True:
+#     rate = float(input("Enter the interest rate: "))
+#     if rate < 0 :
+#         print("Interest rate can't be less than zero")
+#     else:
+#         break
 
-while True:
-    time = int(input("Enter the time in years: "))
-    if time < 0:
-        print("Time can't be less than zero")
-    else:
-       break
+# while True:
+#     time = int(input("Enter the time in years: "))
+#     if time < 0:
+#         print("Time can't be less than zero")
+#     else:
+#        break
 
-total = principle * pow((1 + rate / 100),time)
-print(f"Balance after {time}  year/s: ${total:.2f}")
+# total = principle * pow((1 + rate / 100),time)
+# print(f"Balance after {time}  year/s: ${total:.2f}")
 
-print(principle)
-print(rate)
-print(time)
+# print(principle)
+# print(rate)
+# print(time)
+
+# For loops = execute a block of code a fixed number of times.
+#             You can iterate over a range, string, sequence, etc.
+
+credit_card = "1234-5678-9012-3456"
+
+# for x in (range(1, 11, 2)):
+#     print(x) # 1,3,5,7,9
+
+# print("HAPPY NEW YEAR")
+
+# for x in credit_card:
+#     print(x)
+
+# for x in range(1,21):
+#     if x == 13:
+#       break
+#     else:
+#         print(x)
+
+# import time 
+# my_time = int(input("Enter the time in seconds: "))
+
+# for x in range(my_time, 0, -1):
+#     seconds = x % 60
+#     minutes = int(x / 60) % 60
+#     hours = int(x / 3600)
+#     print(f"{hours:02}:{minutes:02}:{seconds:02}")
+#     time.sleep(1)
+
+# # time.sleep(3)
+
+# print("TIME'S UP!")
+
+
+#NESTED LOOP = A loop within another loop(outer,inner)
+#             Outer Loop:
+#                  inner loop:
+
+rows = int(input("Enter the number of rows: "))
+columns = int(input("Enter the number of columns: "))
+symbol = input("Enter a symbol to use: ")
+
+for x in range(rows):
+    for y in range(columns):
+      print(symbol, end ="")
+    print()
+
+# collection = single "Variable" used to store multiple values
+# List = [] ordered and changeable.Duplicated OK
+# Set ={} unordered and immutable, but Add/Remove OK. No duplicates
+# Tuple =() ordered and unchangeable.Duplicates OK. Faster
+
+fruits = ["apple", "orange", "banana", "coconut"]
+# print(dir(fruits))
+# print(help(fruits))
+print(len(fruits))
+print("apple" in fruits) # True
+print("pineapple" in fruits) # False
+
+fruits[0] = "pineapple"
+fruits.append("pineapple")
+fruits.remove("orange")
+fruits.insert(0, "pineapple")
+# fruits.sort()
+fruits.reverse()
+# fruits.clear()
+# print(fruits.index("coconut"))
+print(fruits.count("banana"))
+
+print(fruits)
+# for fruit in fruits:
+#   print(fruit)
