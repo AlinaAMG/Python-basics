@@ -562,3 +562,6 @@ print(fruits)
 
 #Tuple
 
+fruits = ("apple", "orange", "banana", "coconut", "coconut")
+# print(fruits.index("apple"))
+print(fruits.count("coconut"))
