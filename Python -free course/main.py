@@ -708,34 +708,91 @@ for key, value in capitals.items():
 # print(capitals)
 
 # Concession stand program
-menu = {
-    "pizza":3.00,
-     "nachos": 4.50,
-     "popcorn":6.00,
-     "fries":2.50,
-     "chips": 1.00,
-     "pretzel": 3.50,
-     "soda": 3.00,
-     "lemonade": 4.25,
-     "meat":10.99,
-     "vegetables":2.50
-}
-cart =[]
-total = 0
-print("-----------MENU----------")
-for key, value in menu.items():
-    print(f"{key}: {value:.2f}")
-print("-------------------------")
+# menu = {
+#     "pizza":3.00,
+#      "nachos": 4.50,
+#      "popcorn":6.00,
+#      "fries":2.50,
+#      "chips": 1.00,
+#      "pretzel": 3.50,
+#      "soda": 3.00,
+#      "lemonade": 4.25,
+#      "meat":10.99,
+#      "vegetables":2.50
+# }
+# cart =[]
+# total = 0
+# print("-----------MENU----------")
+# for key, value in menu.items():
+#     print(f"{key}: {value:.2f}")
+# print("-------------------------")
 
-while True:
-    food = input("Select an item (q to quite): ")
-    if food == "q":
-        break
-    elif menu.get(food) is not None:
-        cart.append(food)
+# while True:
+#     food = input("Select an item (q to quite): ")
+#     if food == "q":
+#         break
+#     elif menu.get(food) is not None:
+#         cart.append(food)
 
-print("-------YOUR ORDER---------")
-for food in cart:
-    total += menu.get(food)
-    print(food, end=" ")
-print(f"Total is: ${total:.2f}")
+# print("-------YOUR ORDER---------")
+# for food in cart:
+#     total += menu.get(food)
+#     print(food, end=" ")
+# print(f"Total is: ${total:.2f}")
+
+import random 
+
+# print(help(random))
+
+low = 1
+high = 100
+options = ("rock", "paper", "scissors")
+cards = ["2", "3", "4", "5", "6", "7", "8", "9", "10","J", "Q" , "K", "A"]
+
+
+# number = random.randint(low, high)
+# number = random.random() # random number between 0 and 1
+# option = random.choice(options)
+# print(option)
+# print(number)
+random.shuffle(cards)
+print(cards)
+
+
+# Python number guessing game
+
+lowest_num = 1
+highest_num = 100
+answer = random.randint(lowest_num, highest_num)
+guesses = 0
+is_running = True
+
+print("Python Number Guessing Game")
+print(f"Select a number between {lowest_num} and {highest_num}")
+
+while is_running:
+
+    guess = input("Enter your guess: ")
+
+    if guess.isdigit():
+        guess = int(guess)
+        guesses += 1
+
+        if guess < lowest_num or guess > highest_num:
+            print("That number is out of range")
+            print(f"Please select a number between {lowest_num} and {highest_num}")
+        elif guess < answer:
+            print("Too low! Try again!")
+        elif guess > answer:
+            print("Too high!Try again")
+        else:
+            print(f"CORRECT! The answer was {answer}")
+            print(f"Number of guesses: {guesses}")
+            is_running = False
+
+    else:
+        print("Invalid guess")
+        print(f"Please select a number between {lowest_num} and {highest_num}")
+
+
+# print(answer)
