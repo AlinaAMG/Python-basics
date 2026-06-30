@@ -596,24 +596,24 @@ print(fruits.count("coconut"))
 # meats =["chicken","fish", "turkey"]
 
 # groceries = [fruits, vegetables, meats]
-groceries = [['apple', 'orange', 'banana', 'coconut'], ['celery', 'carrots', 'potatoes'], ['chicken', 'fish', 'turkey']]
+# groceries = [['apple', 'orange', 'banana', 'coconut'], ['celery', 'carrots', 'potatoes'], ['chicken', 'fish', 'turkey']]
 
-for collection in groceries:
-  for food in collection:
-    print(food, end=" ")
-  print()
+# for collection in groceries:
+#   for food in collection:
+#     print(food, end=" ")
+#   print()
 
-# print(groceries)
+# # print(groceries)
 
-num_pad = ((1, 2, 3),
-          (4,5,6), 
-          (7,8,9), 
-          ("*" , 0, "#"))
+# num_pad = ((1, 2, 3),
+#           (4,5,6), 
+#           (7,8,9), 
+#           ("*" , 0, "#"))
 
-for row in num_pad:
-    for num in row:
-        print(num, end = " ")
-    print()
+# for row in num_pad:
+#     for num in row:
+#         print(num, end = " ")
+#     print()
 
 # Python quiz game
 
@@ -668,41 +668,41 @@ for row in num_pad:
 
 # DICTIONARY = a collection of {key:value} pairs ordered and changeable.No duplicates
 
-capitals  = {"USA": "Washington D.C",
-             "India":"New Delhi",
-             "China":"Beijing",
-             "Russia": "Moscow"
-            }
+# capitals  = {"USA": "Washington D.C",
+#              "India":"New Delhi",
+#              "China":"Beijing",
+#              "Russia": "Moscow"
+#             }
 
-# print(dir(capitals))
-# print(help(capitals))
-print(capitals.get("USA"))
-print(capitals.get("Japan"))
+# # print(dir(capitals))
+# # print(help(capitals))
+# print(capitals.get("USA"))
+# print(capitals.get("Japan"))
 
-if capitals.get("Japan"):
-    print("That capital exists")
-else:
-    print("That capital doesn't exist")
+# if capitals.get("Japan"):
+#     print("That capital exists")
+# else:
+#     print("That capital doesn't exist")
 
-capitals.update({"Germany": "Berlin"})
-capitals.update({"USA": "Detroit"})
-capitals.pop("China") # removes China
-capitals.popitem() # removes de last key-value that was inserted
-# capitals.clear() # clear the dictionary
+# capitals.update({"Germany": "Berlin"})
+# capitals.update({"USA": "Detroit"})
+# capitals.pop("China") # removes China
+# capitals.popitem() # removes de last key-value that was inserted
+# # capitals.clear() # clear the dictionary
 
-keys = capitals.keys()
+# keys = capitals.keys()
 
-for key in  capitals.keys():
-    print(key)
-# print(keys)
+# for key in  capitals.keys():
+#     print(key)
+# # print(keys)
 
-values = capitals.values()
-# print(values)
-for value in capitals.values():
-    print(value)
-items = capitals.items()
-for key, value in capitals.items():
-    print(f"{key}: {value}")
+# values = capitals.values()
+# # print(values)
+# for value in capitals.values():
+#     print(value)
+# items = capitals.items()
+# for key, value in capitals.items():
+#     print(f"{key}: {value}")
     
 
 # print(capitals)
@@ -798,33 +798,101 @@ print(cards)
 # print(answer)
 
 
-options = ("rock", "paper", "scissors")
-running= True
+# options = ("rock", "paper", "scissors")
+# running= True
 
-while running:
+# while running:
 
-    player = None
-    computer = random.choice(options)
+#     player = None
+#     computer = random.choice(options)
 
-    while player not in options:
-        player = input("Enter a choice(rock, paper, scissors): ")
+#     while player not in options:
+#         player = input("Enter a choice(rock, paper, scissors): ")
 
-    print(f"Player: {player}")
-    print(f"Computer: {computer}")
+#     print(f"Player: {player}")
+#     print(f"Computer: {computer}")
 
-    if player == computer:
-        print("It's a tie!")
-    elif player == "rock" and computer == "scissors":
-        print("You win!")
-    elif player == "paper" and computer == "rock":
-        print("You win!")
-    elif player == "scissors" and computer == "paper":
-        print("You win!")
-    else:
-        print("You lose!")
-    if not input("Play again? (y/n): ").lower() == "y":
-        running = False
+#     if player == computer:
+#         print("It's a tie!")
+#     elif player == "rock" and computer == "scissors":
+#         print("You win!")
+#     elif player == "paper" and computer == "rock":
+#         print("You win!")
+#     elif player == "scissors" and computer == "paper":
+#         print("You win!")
+#     else:
+#         print("You lose!")
+#     if not input("Play again? (y/n): ").lower() == "y":
+#         running = False
 
-print("Thanks for playing!")
+# print("Thanks for playing!")
 
 
+# Dice roller program in python
+
+print("\u25CF \u250C \u2500 \u2510 \u2502 \u2514 \u2518")
+
+# ● ┌ ─ ┐ │ └ ┘
+
+"┌──────────┐"
+"│          │"
+"│          │"
+"│          │"
+"└──────────┘"
+
+dice_art ={
+    1: ("┌──────────┐",
+        "│          │",
+        "│     ●    │",
+        "│          │",
+        "└──────────┘"),
+    2: ("┌──────────┐",
+        "│  ●       │",
+        "│          │",
+        "│       ●  │",
+        "└──────────┘"),
+    3: ("┌──────────┐",
+        "│  ●       │",
+        "│    ●     │",
+        "│       ●  │",
+        "└──────────┘"),
+    4: ("┌──────────┐",
+        "│  ●   ●   │",
+        "│          │",
+        "│  ●   ●   │",
+        "└──────────┘"),
+    5: ("┌──────────┐",
+        "│  ●   ●   │",
+        "│    ●     │",
+        "│  ●   ●   │",
+        "└──────────┘"),  
+         
+    6: ("┌──────────┐",
+        "│  ●   ●   │",
+        "│  ●   ●   │",
+        "│  ●   ●   │",
+        "└──────────┘"),    
+}
+
+dice=[]
+total = 0
+num_of_dice = int(input("How many dice?: "))
+
+for die in range(num_of_dice):
+    dice.append(random.randint(1, 6))
+
+
+# print(dice)
+
+# for die in range(num_of_dice):
+#    for line in dice_art.get(dice[die]):
+#        print(line)
+
+for line in range(5):
+    for die in dice:
+        print(dice_art.get(die)[line],end="")
+    print()
+
+for die in dice:
+    total += die
+print(f"total: {total}")
