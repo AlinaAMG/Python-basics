@@ -830,56 +830,56 @@ print(cards)
 
 # Dice roller program in python
 
-print("\u25CF \u250C \u2500 \u2510 \u2502 \u2514 \u2518")
+# print("\u25CF \u250C \u2500 \u2510 \u2502 \u2514 \u2518")
 
-# ● ┌ ─ ┐ │ └ ┘
+# # ● ┌ ─ ┐ │ └ ┘
 
-"┌──────────┐"
-"│          │"
-"│          │"
-"│          │"
-"└──────────┘"
+# "┌──────────┐"
+# "│          │"
+# "│          │"
+# "│          │"
+# "└──────────┘"
 
-dice_art ={
-    1: ("┌──────────┐",
-        "│          │",
-        "│     ●    │",
-        "│          │",
-        "└──────────┘"),
-    2: ("┌──────────┐",
-        "│  ●       │",
-        "│          │",
-        "│       ●  │",
-        "└──────────┘"),
-    3: ("┌──────────┐",
-        "│  ●       │",
-        "│    ●     │",
-        "│       ●  │",
-        "└──────────┘"),
-    4: ("┌──────────┐",
-        "│  ●   ●   │",
-        "│          │",
-        "│  ●   ●   │",
-        "└──────────┘"),
-    5: ("┌──────────┐",
-        "│  ●   ●   │",
-        "│    ●     │",
-        "│  ●   ●   │",
-        "└──────────┘"),  
+# dice_art ={
+#     1: ("┌──────────┐",
+#         "│          │",
+#         "│     ●    │",
+#         "│          │",
+#         "└──────────┘"),
+#     2: ("┌──────────┐",
+#         "│  ●       │",
+#         "│          │",
+#         "│       ●  │",
+#         "└──────────┘"),
+#     3: ("┌──────────┐",
+#         "│  ●       │",
+#         "│    ●     │",
+#         "│       ●  │",
+#         "└──────────┘"),
+#     4: ("┌──────────┐",
+#         "│  ●   ●   │",
+#         "│          │",
+#         "│  ●   ●   │",
+#         "└──────────┘"),
+#     5: ("┌──────────┐",
+#         "│  ●   ●   │",
+#         "│    ●     │",
+#         "│  ●   ●   │",
+#         "└──────────┘"),  
          
-    6: ("┌──────────┐",
-        "│  ●   ●   │",
-        "│  ●   ●   │",
-        "│  ●   ●   │",
-        "└──────────┘"),    
-}
+#     6: ("┌──────────┐",
+#         "│  ●   ●   │",
+#         "│  ●   ●   │",
+#         "│  ●   ●   │",
+#         "└──────────┘"),    
+# }
 
-dice=[]
-total = 0
-num_of_dice = int(input("How many dice?: "))
+# dice=[]
+# total = 0
+# num_of_dice = int(input("How many dice?: "))
 
-for die in range(num_of_dice):
-    dice.append(random.randint(1, 6))
+# for die in range(num_of_dice):
+#     dice.append(random.randint(1, 6))
 
 
 # print(dice)
@@ -888,11 +888,64 @@ for die in range(num_of_dice):
 #    for line in dice_art.get(dice[die]):
 #        print(line)
 
-for line in range(5):
-    for die in dice:
-        print(dice_art.get(die)[line],end="")
+# for line in range(5):
+#     for die in dice:
+#         print(dice_art.get(die)[line],end="")
+#     print()
+
+# for die in dice:
+#     total += die
+# print(f"total: {total}")
+
+
+# FUNCTION = a block of reusable code place () after the function name to invoke it
+
+
+def happy_birthday(name,age):
+    print(f"Happy Birthday to {name}!")
+    print(f"You are {age} years old {name}?")
+    print(f"Happy birthday to {name}!")
     print()
 
-for die in dice:
-    total += die
-print(f"total: {total}")
+print(happy_birthday("Aryan",10))
+print(happy_birthday("Steve",40))
+
+def display_invoice(username, amount, due_date):
+    print(f"Hello {username}")
+    print(f"Your bill of {amount:.2f} is due on {due_date}")
+
+display_invoice("Aryan", 42.50,"01/01")
+
+# return = statement used to end a function and send a result back to the caller
+
+
+def add(x,y):
+    z= x+y
+    return z 
+
+def subtract(x,y):
+    z= x-y
+    return z
+
+def multiply(x,y):
+    z= x * y
+    return z
+
+def divide(x,y):
+    z= x/y
+    return z
+
+
+print(add(4,9))
+print(subtract(2,9))
+print(multiply(10,12))
+print(divide(12,89))
+
+def create_name(first,last):
+    first = first.capitalize()
+    last = last.capitalize()
+    return first +" "+ last 
+
+
+full_name = create_name("aryan", "orang")
+print(full_name)
