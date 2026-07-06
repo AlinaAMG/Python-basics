@@ -1102,16 +1102,16 @@ for key, value in  my_dictionary.items():
 #                       1. in
 #                       2. not in
 
-word = "APPLE"
-letter = input("Guess a letter in the secret word: ")
+# word = "APPLE"
+# letter = input("Guess a letter in the secret word: ")
 
-if letter not in word:
-    print(f"There is a {letter}")
-else:
-    print(f"{letter} was not found")
+# if letter not in word:
+#     print(f"There is a {letter}")
+# else:
+#     print(f"{letter} was not found")
 
-students = {"Spongebob", "Patrick", "Sandy"}
-student = input("Enter the name of a student: ")
+# students = {"Spongebob", "Patrick", "Sandy"}
+# student = input("Enter the name of a student: ")
 
 # if student in students:
 #     print(f"{student} is a student")
@@ -1123,22 +1123,63 @@ student = input("Enter the name of a student: ")
 # else:
 #     print(f"{student} is a student")
 
-grades = {
-    "Sandy": "A",
-    "Squidward": "B",
-    "Spongebob":"C",
-    "Patrick":"D"
-}
-student = input("Enter the name of a student: ")
+# grades = {
+#     "Sandy": "A",
+#     "Squidward": "B",
+#     "Spongebob":"C",
+#     "Patrick":"D"
+# }
+# student = input("Enter the name of a student: ")
 
-if student in grades:
-    print(f"{student}'s grade is {grades[student]}")
-else:
-    print(f"{student} was not found")
+# if student in grades:
+#     print(f"{student}'s grade is {grades[student]}")
+# else:
+#     print(f"{student} was not found")
 
-email = "BroCode@gmail.com"
+# email = "BroCode@gmail.com"
 
-if "@" in email and "." in email:
-    print("Valid email")
-else:
-   print("Invalid email")
+# if "@" in email and "." in email:
+#     print("Valid email")
+# else:
+#    print("Invalid email")
+
+#LIST COMPREHENSION =  A concise way to create lists in Python
+#                      Compact and easier to read than traditional loops
+#                      [Expression for value in iterable if condition]
+
+# doubles = []
+# for x in range(1,11):
+#     doubles.append(x * 2)
+    
+# print(doubles)
+
+doubles = [x * 2 for x in range(1,11)]
+triples = [y * 3 for y in range(1,11)]
+squares = [z * z for z in range(1,11)]
+
+print(doubles)
+print(triples)
+print(squares)
+
+fruits = ["apple", "orange", "banana", "coconut"]
+fruits = [fruit.upper() for fruit in fruits]
+fruit_chars =[fruit[0] for fruit in fruits]
+
+print(fruits)
+print(fruit_chars)
+
+# numbers = [1,-2, 3, -4, 5, -6, 8, -7]
+# positive_nums = [num for num in numbers if num >= 0 ]
+# negative_nums = [num for num in numbers if num < 0 ]
+# even_nums = [num for num in numbers if num % 2 == 0]
+# odd_nums = [num  for num in numbers if num % 3 == 0]
+
+
+# print(even_nums)
+# print(positive_nums)
+# print(negative_nums)
+
+grades = [85, 42, 79, 90, 56, 61, 30]
+passing_grades = [grade for grade in grades if grade >= 60]
+
+print(passing_grades)
