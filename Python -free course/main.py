@@ -1220,3 +1220,136 @@ def is_weekend(day):
             return False
 
 print(is_weekend("Monday"))
+
+#module = a file containing code you want to include in your program
+#         use "import" to include a module (built-in or your own)
+#         useful to break up a large program reusable separate files
+
+#import math
+#import math as m 
+#from math import pi
+print(math.pi)
+
+import example
+
+result = example.pi
+result = example.square(3)
+result = example.cube(3)
+result = example.circumference(3)
+result = example.area(3)
+print(result)
+
+
+# Variable scope = where a variable is visible and accessible
+# scope resolution = (LEGB) Local -> Enclosed -> Global -> Built-in
+
+from math import e
+
+print(e)
+
+def func1():
+    a = 1
+    print(a)
+    
+def func2():
+    b = 2
+    print(b)
+
+func1()
+func2()
+
+
+# if __name__ = __main__:(this script can be imported or run standalone )
+#              Functions and classes in this module can be reused
+#              without the main block of code executing
+# ex.library = Import library for functionality
+#            When running library directly, display a help page
+
+def favorite_food(food):
+    print(f"Your favorite food is {food}")
+
+def main():
+    print("This is script1")
+    favorite_food("pizza")
+    print("Goodbye!")
+
+if __name__ == "__main__":
+    main()
+
+
+
+# Python Banking Program
+
+def show_balance(balance):
+    print("********************")
+    print(f"Your balance is ${balance:.2f}")
+    print("********************")
+
+def deposit():
+    print("********************")
+    amount =float(input("Enter an amount to be deposited: "))
+
+    if amount <0:
+        print("********************")
+        print("That's not a valid amount")
+        print("********************")
+        return 0
+    else:
+        return amount
+
+def withdraw(balance):
+    print("***********************")
+    amount =float(input("Enter amount to be withdrawn: "))
+    print("***********************")
+
+    if amount > balance:
+        print("***********************")
+
+        print("Insufficient funds")
+        print("***********************")
+
+        return 0
+    elif  amount < 0:
+        print("***********************")
+
+        print("Amount must be greater than 0")
+        print("***********************")
+
+        return 0 
+    else:
+        return amount
+
+def main():
+    balance = 0
+    is_running = True
+
+    while is_running:
+        print("****************")
+        print("Banking Program")
+        print("****************")
+        print("1.Show Balance")
+        print("2.Deposit")
+        print("3.Withdraw")
+        print("4.Exit")
+        print("****************")
+
+        choice = input("Enter your choice (1-4): ")
+
+        if choice == "1":
+            show_balance(balance)
+        elif choice == "2":
+            balance += deposit()
+        elif choice == "3":
+           balance -= withdraw(balance)
+        elif choice == "4":
+            is_running = False
+        else:
+            print("***************************")
+            print("That is not a valid choice")
+            print("***************************")
+
+    print("Thank you! Have a nice day!")
+
+if __name__ == "__main__":
+    main()
+        
