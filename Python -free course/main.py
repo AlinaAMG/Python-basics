@@ -1468,91 +1468,92 @@ if __name__ == "__main__":
 # Hangman in Python
 
 # dictionary of key:()
-words = ("apple", "orange", "banana", "coconut", "pineapple")
+# words = ("apple", "orange", "banana", "coconut", "pineapple")
 
-hangman_art = {0: ("     ",
-                   "     ",
-                   "     "),
-               1: ("  o  ",
-                   "     ",
-                   "     "),
-               2: ("  o   ",
-                   "  |   ",
-                   "     "),
-               3: ("  o   ",
-                   " /|   ",
-                   "     "),
-               4: ("  o   ",
-                   " /|\\ ",
-                   "     "),
-               5: ("  o   ",
-                   " /|\\  ",
-                   " /   "),
-               6 :("  o   ",
-                   " /|\\  ",
-                   " / \\  "),
-                }
+# hangman_art = {0: ("     ",
+#                    "     ",
+#                    "     "),
+#                1: ("  o  ",
+#                    "     ",
+#                    "     "),
+#                2: ("  o   ",
+#                    "  |   ",
+#                    "     "),
+#                3: ("  o   ",
+#                    " /|   ",
+#                    "     "),
+#                4: ("  o   ",
+#                    " /|\\ ",
+#                    "     "),
+#                5: ("  o   ",
+#                    " /|\\  ",
+#                    " /   "),
+#                6 :("  o   ",
+#                    " /|\\  ",
+#                    " / \\  "),
+#                 }
 
-def display_man(wrong_guesses):
-    print("**********************")
-    for line in hangman_art[wrong_guesses]:
-        print(line)
-    print("**********************")
+# def display_man(wrong_guesses):
+#     print("**********************")
+#     for line in hangman_art[wrong_guesses]:
+#         print(line)
+#     print("**********************")
 
-def display_hint(hint):
-    print(" ".join(hint))
+# def display_hint(hint):
+#     print(" ".join(hint))
 
-def display_answer(answer):
-    print(" ".join(answer))
+# def display_answer(answer):
+#     print(" ".join(answer))
 
-def main():
-    answer = random.choice(words)
-    hint = ["_"] * len(answer)
-    wrong_guesses  = 0
-    guesses_letters = set()
-    is_running = True
+# def main():
+#     answer = random.choice(words)
+#     hint = ["_"] * len(answer)
+#     wrong_guesses  = 0
+#     guesses_letters = set()
+#     is_running = True
 
-    while is_running:
-        display_man(wrong_guesses)
-        display_hint(hint)
-        guess = input("Enter a letter: ").lower()
+#     while is_running:
+#         display_man(wrong_guesses)
+#         display_hint(hint)
+#         guess = input("Enter a letter: ").lower()
 
-        if len(guess) != 1 or not guess.isalpha():
-            print("Invalid input")
-            continue
+#         if len(guess) != 1 or not guess.isalpha():
+#             print("Invalid input")
+#             continue
 
-        if guess in guesses_letters:
-            print(f"{guess} is already guessed ")
-            continue
+#         if guess in guesses_letters:
+#             print(f"{guess} is already guessed ")
+#             continue
 
-        guesses_letters.add(guess)
-
-
-
-        if guess in answer:
-           for i in range(len(answer)):
-              if answer[i] == guess:
-                hint[i] = guess
-        else:
-            wrong_guesses += 1
-
-        if "_" not in hint:
-            display_man(wrong_guesses)
-            display_answer(answer)
-            print("YOU WIN!!")
-            is_running = False
-        elif wrong_guesses >= len(hangman_art) - 1 :
-            display_man(wrong_guesses)
-            display_answer(answer)
-            print("YOU LOSE!")
-            is_running= False
+#         guesses_letters.add(guess)
 
 
 
-if __name__ == "__main__":
-    main()
+#         if guess in answer:
+#            for i in range(len(answer)):
+#               if answer[i] == guess:
+#                 hint[i] = guess
+#         else:
+#             wrong_guesses += 1
 
-    #PYthon Object Oriented Programming
+#         if "_" not in hint:
+#             display_man(wrong_guesses)
+#             display_answer(answer)
+#             print("YOU WIN!!")
+#             is_running = False
+#         elif wrong_guesses >= len(hangman_art) - 1 :
+#             display_man(wrong_guesses)
+#             display_answer(answer)
+#             print("YOU LOSE!")
+#             is_running= False
+
+
+
+# if __name__ == "__main__":
+#     main()
+
+
+#PYthon Object Oriented Programming
 
 # object = A "Bundle" of related attributes (variables) and methods (functions)
 #         Ex. phone, cup, book
@@ -1567,5 +1568,29 @@ class Car:
         self.color = color
         self.for_sale = for_sale
 
+    def drive(self):
+      print(f"You drive the {self.color} {self.model}")
+
+    def stop(self):
+        print(f"You stop  the {self.model}")
+
+    def describe(self):
+        print(f"{self.year} {self.color} {self.model}")
+
 car1 = Car("Mustang", 2025, "red", False)
-print(car1)
+car2 = Car("Corvette", 2025, "blue", True)
+car3 = Car("Charger", 2026, "yellow", True)
+
+car1.describe()
+
+car2.drive()
+car2.stop()
+
+print(car2.model)
+print(car2.year)
+print(car3.color)
+print(car3.for_sale)
+
+
+
+
